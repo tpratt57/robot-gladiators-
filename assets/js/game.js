@@ -96,8 +96,9 @@ var startGame = function () {
       if (playerHealth > 0 && i < enemyNames.length - 1) {
 
         //ask if player wants to use the store before the next round
+        var storeConfirm = window.confirm("The fight is over, visit the store before the next round?");
 
-        var shopOptionPrompt = window.prompt("Would you like to REFILL your health, UPGRADE your attack, or LEAVE the store? Please enter one: 'REFILL', 'UPGRADE', or 'LEAVE' to make a choice.")
+
 
         //if yes, take them to the store() function
         if (storeConfirm) {
@@ -140,6 +141,7 @@ var endGame = function () {
 }
 
 var shop = function () {
+  var shopOptionPrompt = window.prompt("Would you like to REFILL your health, UPGRADE your attack, or LEAVE the store? Please enter one: 'REFILL', 'UPGRADE', or 'LEAVE' to make a choice.")
   console.log("entered the shop!");
 
   switch (shopOptionPrompt) {
